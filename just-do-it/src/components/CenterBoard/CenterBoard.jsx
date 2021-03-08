@@ -14,11 +14,42 @@ const CenterBoard = ({ list, cards }) => {
     setCardsByList(newList);
   }, [cards, list])
 
-  return (
-    <div className="centerBoard__container--card">
+  
+   return (
+        <>
+  
+    {
+      list.name === 'To Do' 
+      ?
+       <div style={{backgroundColor:'#F44336'}} className="centerBoard__container--card">      
       <h2>{cardsByList.length}</h2>
       <p className="centerBoard__container--card-title">{list.name}</p>
-    </div>
+    </div>  
+
+
+      :
+      (
+        list.name === 'Done'
+        ?
+         <div style={{backgroundColor:'#C1EE92'}} className="centerBoard__container--card">      
+      <h2>{cardsByList.length}</h2>
+      <p className="centerBoard__container--card-title">{list.name}</p>
+    </div>  
+
+        :
+         <div style={{backgroundColor:'#FFA000'}}  className="centerBoard__container--card">      
+      <h2>{cardsByList.length}</h2>
+      <p className="centerBoard__container--card-title">{list.name}</p>
+    </div>  
+
+      
+        )
+
+    }
+
+   
+
+    </>
   )
 }
 
