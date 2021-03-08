@@ -13,30 +13,30 @@ const Menu = () => {
         <li className="items">
           <div className="icon_container">
             {" "}
-            <img src={Logo} alt="" />
+            <img src={Logo} alt="logo" />
           </div>
         </li>
         <li className="items">
           <div className="icon_container">
             {" "}
-            <img src={Notifications} alt="" />
+            <img src={Notifications} alt="notifications" />
           </div>
         </li>
         <li className="items">
           <div className="icon_container">
-            <img src={Calendario} alt="" />
+            <img src={Calendario} alt="calendar" />
           </div>
         </li>
       </ul>
       <ul className="container2">
         <li className="items">
           <div className="icon_container">
-            <img src={Members} alt="" />
+            <img src={Members} alt="members" />
           </div>
         </li>
         <li className="items">
           <div className="icon_container">
-            <img src={Star} alt="" />
+            <img src={Star} alt="others" />
           </div>
         </li>
       </ul>
