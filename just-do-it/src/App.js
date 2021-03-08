@@ -61,19 +61,22 @@ const App = ({
   // console.log(cardsByList.length, lists.length);
   return (
     <div className="App">
-      <Menu />
-      <UserCard members={members} />
-      {cardsByBoard[0] ? 
-        <div className="centerBoard__container">
-          {lists.map((list, i) => 
-            <CenterBoard key={i} list={list} cards={cardsByBoard}/>
-          )}
-        </div>
-      : null}
-      <section className="graphs">
-        <VerticalBar lists={lists} cards={cardsByBoard}/>
-        <PieChart lists={lists} cards={cardsByBoard}/>
-      </section>
+   
+        <Menu />
+        <UserCard members={members} />
+        {cardsByBoard[0] ? 
+          <div className="centerBoard__container">
+            {lists.map((list, i) => 
+              <CenterBoard key={i} list={list} cards={cardsByBoard}/>
+            )}
+          </div>
+        : null}
+        <section className="graphs">
+          <VerticalBar lists={lists} cards={cardsByBoard}/>
+          <PieChart lists={lists} cards={cardsByBoard}/>
+        </section>
+  
+
     </div>
   );
 };

@@ -1,3 +1,7 @@
+* {
+  background-color: aquamarine;
+}
+
 .centerBoard__container {
   display: flex;
   justify-content: center;
