@@ -62,19 +62,36 @@ const App = ({
   return (
     <div className="App">
    
-        <Menu />
+       <div className="wrapper__menu">
+          <Menu />
+       </div>
+       <div className="wrapper__user">
+
         <UserCard members={members} />
+       </div>
+
+        <div className="wrapper__center">
+
         {cardsByBoard[0] ? 
           <div className="centerBoard__container">
             {lists.map((list, i) => 
-              <CenterBoard key={i} list={list} cards={cardsByBoard}/>
+        
+                <CenterBoard key={i} list={list} cards={cardsByBoard}/>
+              
             )}
           </div>
         : null}
-        <section className="graphs">
-          <VerticalBar lists={lists} cards={cardsByBoard}/>
-          <PieChart lists={lists} cards={cardsByBoard}/>
-        </section>
+
+        </div>
+
+
+        <div className="wrapper__graphs">
+
+         <div className="graphs__container">
+            <VerticalBar lists={lists} cards={cardsByBoard}/>
+            <PieChart lists={lists} cards={cardsByBoard}/>
+         </div>
+        </div>
   
 
     </div>
