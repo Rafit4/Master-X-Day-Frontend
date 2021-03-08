@@ -10,11 +10,13 @@
   background-color: #414141;
   color: white;
   padding: 10px;
+  height: auto;
+  min-width: 443px;
 }
 .wrapper__menu {
   display: grid;
   grid-area: menu;
-  justify-content: center;
+  /* justify-content: space-around; */
   align-items: center;
   /*   grid-row: 1 / end;
   grid-column: 1/2; */
@@ -47,13 +49,68 @@
   width: auto;
 }
 
+@media (max-width: 900px) {
+  .App {
+    display: flex;
+    flex-direction: column;
+  }
+  .wrapper__menu {
+    display: block;
+  }
+
+  .wrapper__graphs {
+    display: block;
+    flex-direction: column;
+  }
+  .graphs__container {
+    flex-direction: column;
+  }
+}
 @media (max-width: 600px) {
-  .centerBoard__container {
-    /*  border: 1px solid red; */
-    height: 400px;
+  .App {
+    display: grid;
+    grid-template-rows: 150px 150px auto auto;
+    grid-template-columns: none;
+    grid-template-areas:
+      "menu"
+      "user"
+      "center"
+      "graphs";
+  }
+  .wrapper__menu {
+    display: grid;
+    grid-area: menu;
+
+    /*   grid-row: 1 / end;
+  grid-column: 1/2; */
+  }
+  .wrapper__user {
+    display: grid;
+    grid-area: user;
+
+    /*  grid-column: 2 / 3; */
+  }
+  .wrapper__center {
+    display: grid;
+    grid-area: center;
+
+    /*   grid-column: 2 / 3;
+  grid-row: 2/3; */
+  }
+  .wrapper__graphs {
+    display: grid;
+    grid-area: graphs;
+    grid-gap: 10px;
+    /*  grid-column: 2/3;
+  grid-row: 3/4; */
   }
 }
 
 .graphs {
   display: flex;
+}
+@media (min-width: 900px) {
+  .App {
+    height: 100vh;
+  }
 }

@@ -16,7 +16,7 @@
   justify-content: space-around;
   border: 1px solid gray;
   margin: 10px;
-  height: 250px;
+  height: 350px;
   /* width: 400px; */
   min-width: 200px;
   border-radius: 20px;
@@ -50,5 +50,26 @@
   }
   .centerBoard__container--card {
     height: 350px;
+  }
+}
+@media (min-width: 1200px) {
+  .centerBoard__container {
+    height: auto;
+  }
+  .centerBoard__container--card {
+    height: 500px;
+    width: 400px;
+  }
+  .centerBoard__container--card-title {
+    background-color: #c4c4c4;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: 0px;
+    color: white;
+    font-weight: 700;
+    overflow: hidden;
+    text-align: center;
+    font-size: 45px;
   }
 }

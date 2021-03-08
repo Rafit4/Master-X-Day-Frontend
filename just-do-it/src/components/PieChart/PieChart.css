@@ -16,5 +16,13 @@
   /* text-align: left; */
 }
 
-.pie-section__graph {
+@media (min-width: 1200px) {
+  .pie-section {
+    height: 500px;
+    width: 500px;
+  }
+  .vertical-bar-section__title {
+    font-size: 1em;
+    margin-bottom: 50px;
+  }
 }

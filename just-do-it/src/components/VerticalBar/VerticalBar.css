@@ -9,12 +9,21 @@
   align-items: center;
   background-color: #c4c4c4;
   color: black;
+  margin-bottom: 5px;
 }
 
 .vertical-bar-section__title {
   font-size: 1rem;
   /* text-align: left; */
 }
-
-.vertical-bar-section__graph {
+@media (min-width: 1200px) {
+  .vertical-bar-section {
+    height: 500px;
+    width: 500px;
+  }
+  .pie-section__title {
+    font-size: 3rem;
+    margin-bottom: 50px;
+    /* text-align: left; */
+  }
 }
